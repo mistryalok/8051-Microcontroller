@@ -1,0 +1,3 @@
+These folder contains the C and header file for LCD Interfacing, can be used with any compiler you want, i have done with Keil.
+LCD.C contains all the LCD functions used.
+You are welcome to share, modify and collaborate this code.

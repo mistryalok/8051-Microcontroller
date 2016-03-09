@@ -1,0 +1,19 @@
+#include <REGX51.H>
+	ORG 0000H
+AG:	MOV P1,#0FFH
+	MOV A,P1
+	CJNE A,#0FFH,CHECK
+	AJMP AG
+
+
+CHECK:	  CJNE A,#7FH,A1
+		  MOV P3,#00H
+	
+		  MOV P3,#0FBH
+		  AJMP AG
+A1:				CJNE A,#3FH,AG
+
+	MOV P3,#00H
+			MOV P3,#0F7H
+			LJMP AG
+			END

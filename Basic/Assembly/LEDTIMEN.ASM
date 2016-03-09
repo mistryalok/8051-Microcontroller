@@ -1,0 +1,6 @@
+#include <REGX51.H>
+START:	MOV P1,#0FFH
+		MOV	A,P1
+		MOV P3,A
+		AJMP START
+		END

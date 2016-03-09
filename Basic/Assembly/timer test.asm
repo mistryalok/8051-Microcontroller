@@ -1,0 +1,9 @@
+#include <REGX51.H>
+org 0000h
+		MOV TMOD,#10H
+		MOV TL1,#9BH
+		MOV TH1,#0FFH
+		MOV TCON,#00H
+		SETB TR1
+		JNB TF1,$
+		END

@@ -1,0 +1,22 @@
+#include <REGX51.H>
+		ORG 0000H
+		AJMP START
+		ORG 0030H
+START:
+		
+	
+		MOV TMOD,#20H
+		MOV TH1,#0FDH
+		MOV SCON,#50H
+		SETB TR1
+HE:		JNB RI,HE
+		CLR RI
+		MOV A,SBUF
+		CJNE A,#'B',HE
+		MOV SBUF,#'M'
+ME:		JNB TI,ME
+		CLR REN
+		END
+
+	
+

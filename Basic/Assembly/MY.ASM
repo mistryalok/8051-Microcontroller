@@ -1,0 +1,5 @@
+#include <REGX51.H>
+	ORG 0000H
+	MOV P1,#FFH
+	MOV P1,#55H
+	END
